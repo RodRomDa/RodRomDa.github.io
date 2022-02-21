@@ -10,7 +10,8 @@
   <body>
     <header class="page-header">
       <div class="container">
-        Контакты в шапке
+        <a class ="header-email" href="mailto:rdavidenko@sfedu.ru">rdavidenko@sfedu.ru</a>
+    <a class="header-phone" href="tel:+79876543210">+7 987 654 32 10</a>
       </div>
     </header>
 
@@ -24,28 +25,50 @@
     <section class="intro">
       <div class="container">
         <h2 class="subheading">Давайте познакомимся</h2>
+        <figure class="user-image">
+          <img src="files/user.jpg" height="512" alt="Фотография Давиденко Родиона">
+        </figure>
         <h3>Пара слов о себе</h3>
         <p>Текст с парой слов о себе.</p>
         <h3>Чем могу быть полезен</h3>
         <p>Текст о том, чем могу быть полезен.</p>
+
+        <div class="skills">
+          <h3>Мои навыки</h3>
+          <dl class="skills-list">
+            <dt class="skill-html">HTML</dt>
+            <dd class="level"><div style="width: 60%;">60%</div></dd>
+            <dt class="skill-css">CSS</dt>
+            <dd class="level"><div style="width: 40%;">40%</div></dd>
+          </dl>
+        </div>
       </div>
     </section>
 
     <section class="portfolio">
       <div class="container">
         <h2 class="subheading">Мои работы</h2>
-
-        <h3>Магазин товаров для дома</h3>
-        <p>Мой первый сайт.</p>
-
-        <h3>Блог начинающего верстальщика</h3>
-        <p>Статический блог про обучение HTML и CSS.</p>
+        
+        <div class="project-card">
+          <figure class="project-image">
+            <img src="files/project.jpg" alt="Cайт магазина товаров для дома">
+          </figure>
+          <h3>Магазин товаров для дома</h3>
+          <p>Мой первый сайт.</p>
+          <a class="button" href="source/project-gloevk/index.html">Открыть страницу</a>
+        </div>
+        
+        <div class="project-card">
+          <h3>Блог начинающего верстальщика</h3>
+          <p>Статический блог про обучение HTML и CSS.</p>
+        </div>
       </div>
     </section>
 
     <footer class="page-footer">
       <div class="container">
-        Контакты в подвале
+        <a class ="footer-email" href="mailto:rdavidenko@sfedu.ru">rdavidenko@sfedu.ru</a>
+        <a class="footer-phone" href="tel:+79876543210">+7 987 654 32 10</a>
       </div>
     </footer>
   </body>

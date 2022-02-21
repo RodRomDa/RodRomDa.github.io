@@ -74,7 +74,7 @@ body {
 }
 
 .subheading {
-  margin: 0 0 56px;
+  margin: 0 0 26px;
   font-family: "Old Standard TT", "Times", "Times New Roman", serif;
   font-size: 64px;
   line-height: 80px;
@@ -191,4 +191,20 @@ body {
 .footer-phone {
   padding-left: 25px;
   background-image: url("img/icon-phone-footer.svg");
+}
+
+.project-card {
+  background-color: #ffffff;
+  padding: 30px;
+  box-shadow: 0px 0px 11px 1px #d4cdcd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.project-card img {
+  width: 100%;
+  border: #222222 solid 1px;
+  border: #dedada solid 1px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px 1px #d4cdcd;
 }
