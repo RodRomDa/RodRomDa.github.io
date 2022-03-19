@@ -28,18 +28,19 @@
         <figure class="user-image">
           <img src="files/user.jpg" height="512" alt="Фотография Давиденко Родиона">
         </figure>
-        <h3>Пара слов о себе</h3>
-        <p>Текст с парой слов о себе.</p>
-        <h3>Чем могу быть полезен</h3>
-        <p>Текст о том, чем могу быть полезен.</p>
-
+        <div class="about">
+          <h3>Пара слов о себе</h3>
+          <p>Текст с парой слов о себе. Просто человек. Стоит отметить, что если внимательно вчитаться в этот параграф, то он всё же окажется не о чём. Смотри как могу: &ltp&gt Текст &lt/p&gt</p>  
+        </div>     
         <div class="skills">
           <h3>Мои навыки</h3>
           <dl class="skills-list">
             <dt class="skill-html">HTML</dt>
-            <dd class="level"><div style="width: 60%;">60%</div></dd>
+            <dd class="level"><div style="width: 80%;">80%</div></dd>
             <dt class="skill-css">CSS</dt>
-            <dd class="level"><div style="width: 40%;">40%</div></dd>
+            <dd class="level"><div style="width: 70%;">70%</div></dd>
+            <dt class="skill-js">JS</dt>
+            <dd class="level"><div style="width: 30%;">30%</div></dd>
           </dl>
         </div>
       </div>
@@ -48,7 +49,16 @@
     <section class="portfolio">
       <div class="container">
         <h2 class="subheading">Мои работы</h2>
-        
+
+        <div class="project-card">
+          <figure class="project-image">
+            <img src="files/project_kvast.jpg" alt="Производитель кваса 'Кваст'">
+          </figure>
+          <h3>Производитель кваса "Кваст"</h3>
+          <p>Лендинг для производителя кваса</p>
+          <a class="button" href="source/project-kvast/index.html">Открыть страницу</a>
+        </div>
+
         <div class="project-card">
           <figure class="project-image">
             <img src="files/project.jpg" alt="Cайт магазина товаров для дома">
@@ -58,17 +68,30 @@
           <a class="button" href="source/project-gloevk/index.html">Открыть страницу</a>
         </div>
         
-        <div class="project-card">
-          <h3>Блог начинающего верстальщика</h3>
-          <p>Статический блог про обучение HTML и CSS.</p>
+      </div>
+    </section>
+
+    <section class="outro">
+      <div class="container">
+        <div class="quotes">
+          <h3>Любимые цитаты</h3>
+          <blockquote>
+            <p>Плохие программисты думают о коде. Хорошие программисты думают о структурах данных и их взаимосвязях.</p>
+            <cite>Линус Торвальдс</cite>
+          </blockquote>
+          <blockquote>
+            <p>Самая сложная часть создания программной системы — решить, что именно создавать. Никакая другая часть концептуальной работы не является такой сложной, как установление подробных технических требований, включая все интерфейсы для людей, машин и других программных систем. Никакая другая часть работы не портит так результирующую систему, если она сделана неправильно. Никакая другая часть не является более сложной для исправления позже.</p>
+            <cite>Ф.Брукс «Серебряной пули нет»</cite>
+          </blockquote>
         </div>
       </div>
     </section>
+    
 
     <footer class="page-footer">
       <div class="container">
         <a class ="footer-email" href="mailto:rdavidenko@sfedu.ru">rdavidenko@sfedu.ru</a>
-        <a class="footer-phone" href="tel:+79876543210">+7 987 654 32 10</a>
+        <a class="footer-phone" href="tel:+79876543210">+7 800 555 35 35</a>
       </div>
     </footer>
   </body>
