@@ -1,0 +1,78 @@
+@import "../general/colors.scss";
+
+header {
+    display: flex;
+    background-color: $surface-color;
+    padding-right: 130px;
+    padding-left: 380px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+header .menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    color: $light-font-color;
+    align-items: flex-end;
+}
+
+.menu .item {
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    position: relative;
+
+    &::before, &::after {
+        content: "";
+        width: 0;
+        height: 3px;
+        background-color: $light-font-color;
+        will-change: width;
+        transition: width .1s ease-out;
+        position: absolute;
+        bottom: 0;
+    }
+
+    &::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &::after {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    &:hover::before,
+    &:hover::after,
+    &.active::before,
+    &.active::after
+    {
+        width: 100%;
+        transition-duration: .3s;
+    }
+
+    a {
+        &::after {
+            content: "";
+            width: 3px;
+            height: 44px;
+            position: absolute;
+            right: 0;
+            top: 25px;
+            background-color: $light-font-color;
+        }
+        line-height: 21px;
+        display: block;
+        padding: 38px 50px 39px;
+        color: $light-font-color;
+        text-decoration: none;
+    }
+}
+
+header .logo {
+    height: 58px;
+    margin-bottom: 27.5px;
+}

@@ -1,0 +1,37 @@
+@import "colors.scss";
+
+//Roboto - regular, medium, bold
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.App {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19.2px;
+    line-height: 23px;
+    color: $font-color;
+}
+
+p {
+    margin: 0;
+    text-align: justify;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+}
+
+h2 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+h3 {
+    margin: 0;
+    font-weight: 500;
+}
