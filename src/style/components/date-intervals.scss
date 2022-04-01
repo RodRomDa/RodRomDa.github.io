@@ -1,0 +1,77 @@
+@import "../general/colors.scss";
+
+.date-intervals {
+    position: relative;
+    width: 100%;
+    margin-top: 107px;
+    margin-bottom: 8px;
+
+    .messages {
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+
+        & > span {
+            --position: 0%;
+            color: $primary-color;
+            font-size: 40px;
+            position: absolute;
+            transform: translate(-50%);
+            left: var(--position);
+            bottom: 0;
+        }
+
+        & > span.alt {
+            color: $secondary-color;
+        }
+    }
+    .message {
+        --position: 0%;
+        --size: 12px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        color: $light-font-color;
+
+        position: absolute;
+        transform: translate(-50%, calc(var(--size)*1.2));
+        left: var(--position);
+        bottom: 0;
+
+        .stage {
+            border-radius: 100%;
+            background-color: $primary-color;
+            line-height: 19.2px;
+            padding: 5px 10px;
+            padding-top: 7px;
+            margin-bottom: 7px;
+        }
+
+        .blob {        
+            padding: 10px;
+            background-color: $primary-color;
+            border-radius: 10px;
+        }
+
+        &::after {
+            content: "";        
+            border-left: var(--size) solid transparent;
+            border-right: var(--size) solid transparent;
+            border-bottom: var(--size) solid transparent;
+            border-top: calc(2 * var(--size) * 0.866) solid $primary-color;
+            margin-top: -1px;
+        }
+    }
+
+    .indicators {
+        background-color: $secondary-color;
+    }
+    .indicator {
+        --position: 0%;
+        background-color: $primary-color;
+        width: var(--position);
+        height: 8px;
+        margin-bottom: -8px;
+        position: relative;
+    }
+}

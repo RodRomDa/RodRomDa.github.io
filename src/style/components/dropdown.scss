@@ -1,0 +1,100 @@
+@import "../general/colors.scss";
+@import "../general/effects.scss";
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 16px;
+    padding-right: 40px;
+
+    cursor: pointer;
+
+    color: $controls-color;
+    background-color: rgba(0, 0, 0, 0.02);
+    border: 2px solid $controls-color;
+    border-radius: 16px;
+    font-weight: 500;
+
+    user-select: none;
+
+    transition: all ease-out 0.2s;
+
+    .list {
+        white-space: nowrap;
+        display: inline-block;
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 0;
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+
+        background-color: $background-color;
+        border-radius: 16px;
+        box-shadow: $short-shadow;
+
+        transform-origin: 50% 0;
+        transform: scale(.75) translateY(-21px);
+        transition: all .2s cubic-bezier(.5,0,0,1.25),opacity .15s ease-out;
+        z-index: 9;
+
+        .option {
+            padding: 8px 16px;
+            color: $controls-color;
+
+            transition: all ease-out 0.2s;
+
+            &:hover {
+                background-color: $controls-hover-color;
+            }
+
+            &.selected {
+                background-color: $controls-hover-color;
+                color: $primary-color;
+            }
+        }
+    }
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+        border-color: $primary-color;
+        color: $primary-color;
+        &::after {
+            border-color: $primary-color;
+        }
+    }
+
+    &::after {
+        border-bottom: 2px solid $controls-color;
+        border-right: 2px solid $controls-color;
+        content: "";
+        display: block;
+        height: 8px;
+        margin-top: -4px;
+        pointer-events: none;
+        position: absolute;
+        right: 16px;
+        top: 46%;
+        transform-origin: 66% 66%;
+        transform: rotate(45deg);
+        transition: all .15s ease-in-out;
+        width: 8px;
+
+        // font-family: "Font Awesome 5 Free";
+        // font-weight: 900;
+        // content: "\f107";
+        // margin-left: 16px;
+    }
+
+    &.open {
+        .list {
+            opacity: 1;
+            pointer-events: auto;
+            transform: scale(1) translateY(0);
+        }
+
+        &::after {
+            transform: rotate(-135deg);
+        }
+    }
+}

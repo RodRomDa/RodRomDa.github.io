@@ -1,0 +1,35 @@
+@import "../general/colors.scss";
+@import "../general/effects.scss";
+
+.paging {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+
+    ul {
+        margin: 0 auto;
+        display: flex;
+        gap: 10px;
+    }
+
+    .page-btn {
+        background-color: $background-color;
+        box-shadow: $normal-shadow;
+        padding: 6px 10px;
+        line-height: 19.2px;
+        border-radius: 10px;
+        cursor: pointer;
+        user-select: none;
+
+        transition: all .1s ease-out;
+
+        &:hover {
+            background-color: $controls-hover-color;
+        }
+        &.active {
+            background-color: $controls-hover-color;
+            color: $primary-color;
+            border: 1px solid $primary-color;
+        }
+    }
+}

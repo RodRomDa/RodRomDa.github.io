@@ -1,0 +1,43 @@
+@import "../general/colors.scss";
+
+.gallery {
+    .owl-item .item img {
+        width: 135px;
+        height: 135px;
+        object-fit: cover;
+        border-radius: 10px;
+        cursor: grab;
+    }
+
+    .owl-theme .owl-nav.disabled + .owl-dots {
+        margin-top: 0px;
+    }
+
+    .owl-carousel .owl-stage-outer {
+        margin-bottom: 28px;
+    }
+
+    .owl-theme .owl-dots .owl-dot {    
+        span {
+            background-color: $controls-color;
+        }
+
+        &.active {
+            span {
+                background-color: $surface-color;
+            }
+        }
+    }
+
+    &.show-dots {
+        .owl-carousel .owl-dots.disabled {
+            display: block;
+        }
+    }
+
+    &.empty {
+        .owl-carousel .owl-stage-outer {
+            margin-bottom: 0px;
+        }
+    }
+}

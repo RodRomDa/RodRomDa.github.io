@@ -1,0 +1,51 @@
+@import "general/colors.scss";
+@import "general/clear.scss";
+@import "general/effects.scss";
+@import "general/fonts.scss";
+@import "general/containers.scss";
+
+@import "components/inputs.scss";
+@import "components/button.scss";
+@import "components/dropdown.scss";
+@import "components/checkbox.scss";
+@import "components/form.scss";
+@import "components/search-bar.scss";
+@import "components/date-intervals.scss";
+@import "components/vote.scss";
+@import "components/link.scss";
+
+@import "blocks/header.scss";
+@import "blocks/footer.scss";
+@import "blocks/breadcrumbs.scss";
+@import "blocks/login.scss";
+@import "blocks/popular-themes.scss";
+@import "blocks/table.scss";
+@import "blocks/paging.scss";
+@import "blocks/stages.scss";
+@import "blocks/content-header.scss";
+@import "blocks/content-body.scss";
+@import "blocks/gallery.scss";
+@import "blocks/comments.scss";
+
+@import "pages/login.scss";
+
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+}
+  

@@ -1,0 +1,55 @@
+@import "../general/colors.scss";
+@import "../general/effects.scss";
+
+.search-bar {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+
+    .form-group {
+        width: 150px;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.bar {
+    background-color: $background-color;
+    box-shadow: $normal-shadow;
+    padding: 15px;
+    border-radius: 16px;
+    color: $controls-color;
+    width: 670px;
+
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    grid-row: 55px;
+
+    input {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 25px;
+        color: $font-color;
+        //width: 95%;
+    }
+    ::placeholder {
+        font-weight: 500;
+        color: $controls-color;
+        opacity: 1;
+    }
+    ::-ms-input-placeholder {
+        font-weight: 500;
+        color: $controls-color;
+    }
+
+    &::before {
+        content: "\f002";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 21px;
+        display: flex;
+        align-items: center;
+    }
+}

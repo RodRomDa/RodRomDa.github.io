@@ -1,0 +1,36 @@
+@import "../general/colors.scss";
+
+.vote {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 2;
+
+    i {
+        cursor: pointer;
+        font-size: 36px;
+        color: $surface-color;
+
+        transition: all .2s ease-out;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+
+    .count {
+        width: 74px;
+        padding: 13px 5px;
+        padding-left: 4px;
+        border: 1px solid $controls-color;
+        background-color: $background-color;
+        text-align: center;
+        border-radius: 13px;
+    }
+
+    &.active {
+        i {
+            color: $secondary-color;
+        }
+    }
+}

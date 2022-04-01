@@ -1,0 +1,97 @@
+@import "../general/colors.scss";
+
+.inp {
+    position: relative;
+    display: block;
+
+    span.label {
+        font-weight: 500;
+        color: $controls-color;
+        position: absolute;
+
+        left: 15px;
+        top: 15px;
+
+        transition: all ease-out 0.1s;
+    }
+
+    span.error {
+        display: inline-block;
+        padding: 0px 15px;
+        color: $error-color;
+        font-size: 15.36px;
+        line-height: 18px;
+    }
+
+    .input {
+        width: 100%;
+        padding: 25px 15px 5px;
+
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+        color: $font-color;
+        background-color:rgba(0, 0, 0, 0.02);
+        border-radius: 8px 8px 0px 0px;
+        box-shadow: inset 0px -2px 0px $controls-color;
+
+        transition: all ease-out 0.1s;
+
+        //On focus
+        &:focus,
+        &:not(:placeholder-shown) {
+            background-color: rgba(0, 0, 0, 0.05);
+            box-shadow: inset 0px -2px 0px $primary-color;
+        }
+        &:focus + span,
+        &:not(:placeholder-shown)+span {
+            line-height: 18px;
+            color: $primary-color;
+            font-size: 15.36px;
+            top: 5px;
+        }
+    }
+
+    //On hover
+    &:hover .input {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    //On error
+    &.error {
+        .input {
+            box-shadow: inset 0px -2px 0px $error-color;
+        }
+
+        .input + span {
+            color: $error-color;
+        }
+    }
+
+    //Dark
+    &.dark {
+        .input {
+            background-color: rgba(200, 200, 200, 0.02);
+            color: $light-font-color;
+            &:focus,
+            &:not(:placeholder-shown) {
+                background-color: rgba(200, 200, 200, 0.05);
+            }
+        }
+        //On hover
+        &:hover .input {
+            background-color: rgba(200, 200, 200, 0.05);
+        }
+    }
+
+    textarea.input {
+        resize: none;
+        overflow: hidden;
+        display: block;
+    }
+
+    &.number {
+        max-width: 212px;
+    }
+}

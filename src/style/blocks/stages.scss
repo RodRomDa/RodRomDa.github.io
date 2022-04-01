@@ -1,0 +1,47 @@
+@import "../general/colors.scss";
+@import "../general/effects.scss";
+
+.stages {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+
+    .stage {
+        position: relative;
+        padding: 12px 24px;
+        border-left: 7px solid $controls-color;
+        box-shadow: $normal-shadow;
+
+        counter-increment: stage;
+        display: list-item;
+
+        &::before {
+            content: counter(stage);
+            position: absolute;
+            display: inline-block;
+            border-radius: 100%;
+            background-color: $controls-color;
+            color: $light-font-color;
+            line-height: 19.2px;
+            padding: 5px 10px;
+            padding-top: 7px;
+            margin-bottom: 7px;
+            top: 50%;
+            left: -12px;
+            transform: translate(-100%, -50%)
+        }
+
+        h2 {
+            margin-bottom: 7px;
+        }
+
+        &.active {
+            box-shadow: $accent-shadow;
+            border-left-color: $primary-color;
+
+            &::before {
+                background-color: $primary-color;
+            }
+        }
+    }
+}

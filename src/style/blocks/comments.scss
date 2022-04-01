@@ -1,0 +1,33 @@
+@import "../general/colors.scss";
+@import "../general/effects.scss";
+
+.comments {
+
+    .comment {
+        margin-top: 18px;
+        background-color: $background-color;
+        box-shadow: $normal-shadow;
+        padding: 20px 40px;
+
+        .comment-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 13px;
+
+            .author {
+                display: flex;
+                align-items: center;
+    
+                img {
+                    width: 50px;
+                    height: 50px;
+                    object-fit: cover;
+                    border-radius: 100%;
+                    border: 2px solid $secondary-color;
+                    margin-right: 13px;
+                }
+            }
+        }
+    }
+}

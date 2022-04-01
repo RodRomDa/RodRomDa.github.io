@@ -1,0 +1,17 @@
+@import "colors.scss";
+@import "effects.scss";
+
+.container {
+    max-width: 1096px;
+    margin: 0 auto;
+    //margin-top: 45px;
+    margin-bottom: 20px;
+}
+
+.pad-container {
+    padding: 0px 40px;
+}
+
+section.separate{
+    margin-top: 40px;
+}

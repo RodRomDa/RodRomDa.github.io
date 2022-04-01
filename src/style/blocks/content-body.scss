@@ -1,0 +1,50 @@
+.content-body {
+    background-color: $background-color;
+    box-shadow: $normal-shadow;
+    padding: 20px 40px;
+}
+
+h1.content-title {
+    margin-bottom: 10px;
+}
+
+section.description {
+    margin-bottom: 25px;
+}
+
+section.photos {
+    margin-top: 40px;
+}
+
+section.ideas {
+    margin-top: 25px;
+}
+
+.content-body.theme {
+    padding: 20px 0;
+}
+
+.content-body.idea {
+    padding: 40px;
+    padding-top: 30px;
+
+    .description {
+        margin-bottom: 28px;
+    }
+    .photos {
+        margin-top: 0;
+    }
+    .resources {
+        h1 {
+            margin-bottom: 13px;
+        }
+    }
+    .add-comment {
+        margin-top: 28px;
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+@import "../general/effects.scss";
+.login {
+    min-height: 100vh;
+    background: $background-gradient;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

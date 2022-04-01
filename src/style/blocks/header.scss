@@ -10,9 +10,6 @@ header {
 }
 
 header .menu {
-    margin: 0;
-    padding: 0;
-    list-style: none;
     display: flex;
     color: $light-font-color;
     align-items: flex-end;
@@ -24,6 +21,26 @@ header .menu {
     text-transform: uppercase;
     position: relative;
 
+    a {
+        line-height: 21px;
+        display: block;
+        padding: 38px 50px 39px;
+        color: $light-font-color;
+        text-decoration: none;
+    }
+
+    //Right slash |
+    &:not(:last-child) a::after {
+        content: "";
+        width: 3px;
+        height: 44px;
+        position: absolute;
+        right: -1px;
+        top: 25px;
+        background-color: $light-font-color;
+    }
+
+    //Animation of buttom part
     &::before, &::after {
         content: "";
         width: 0;
@@ -50,25 +67,8 @@ header .menu {
     &.active::before,
     &.active::after
     {
-        width: 100%;
+        width: calc(100% - 8px);
         transition-duration: .3s;
-    }
-
-    a {
-        &::after {
-            content: "";
-            width: 3px;
-            height: 44px;
-            position: absolute;
-            right: 0;
-            top: 25px;
-            background-color: $light-font-color;
-        }
-        line-height: 21px;
-        display: block;
-        padding: 38px 50px 39px;
-        color: $light-font-color;
-        text-decoration: none;
     }
 }
 
