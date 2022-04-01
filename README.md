@@ -1,6 +1,6 @@
 # Приложение BestIdea
 
-Данный проект был рарааботан на фреймворке [ReactJS](https://reactjs.org/).\
+Данный проект был разработан с использованием фреймворка [ReactJS](https://reactjs.org/).\
 Является реализацией [дизайн-системы](https://www.figma.com/file/PHVPZ4Qczf6jwT8xcKAQSf/Project_DavidenkoRR?node-id=55%3A3306), разработанной в Figma.
 
 ## Корпоративный портал для идей и предложений сотрудников
