@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Приложение BestIdea
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Данный проект был рарааботан на фреймворке ReactJS [ReactJS] (https://reactjs.org/).\
+Является реализацией [дизайн-системы] (https://www.figma.com/file/PHVPZ4Qczf6jwT8xcKAQSf/Project_DavidenkoRR?node-id=55%3A3306), разработанной в Figma.
 
-## Available Scripts
+## Корпоративный портал для идей и предложений сотрудников
 
-In the project directory, you can run:
+Сервис предоставляет возможность собирать идеи и предложения своих сотрудников по улучшению различных аспектов деятельности компании.\
+Идея сервиса заключается в возможности сотрудников выкладывать свои идеи и предложения по различным темам/проблемам, и последующем голосовании сотрудниками, для выбора лучших из них.\
+Наиболее активные сотрудники находятся в топе списка лидеров (leaderboard).
 
-### `npm start`
+### Целевая аудитория
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Выступают различные компании, учебные заведения, креативные группы – все те коллективы, где происходит совместное обсуждение, учет мнений, выработка общего решения и которые желают узнать мнение своих сотрудников.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Пользователи
 
-### `npm test`
+В системе есть две основные роли - сотрудники и руководители.\
+Сотрудники могут:\
+- предлагать свои идеи в определенные темы (созданные руководителями)
+- голосовать за идеи других
+- оставлять комментарии к идеям
+- развивать другие идеи (дополнять/уточнять)\
+Руководители могут тоже что и сотрудники, а также:
+- создавать тематики для предложения идей
+- задавать сроки предложения идей и голосования за идеи
+- задавать этапы развития идей
+- принимать/отклонять конечные идеи
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Глоссарий
 
-### `npm run build`
+*Фаза* - некоторый промежуток времени, в течении которого сотрудники могут либо предлагать идеи (фаза предложения), либо оценивать предложенные другими сотрудниками идеи (фаза оценивания).\
+*Тематика* - некоторый раздел, имеющий название и описание, в который сотрудники могут предлагать идеи. Предназначена чтобы структурировать предлагаемые сотрудниками идеи и задать вектор направленности идей.\
+*Простая тематика* - это тематика, которая состоит только из фазы предложения и фазы оценивания.
+*Многоэтапная тематика* - это тематика состоящая из нескольких этапов.\
+*Этап тематики* - имеет своё название и описание, состоит из фазы предложения и фазы оценивания и направлен на проработку предложенных идеи в определённом аспекте. По завершению этапа остаются несколько идеи-победителей, которые проходят на следующий этап. На следующем этапе сотрудники развивают идеи-победители.\
+*Развить идею* - каждый сотрудник в фазе предложения может не создавать идею  с нуля, а дополнить идею другого сотрудника, раскрыть её в другом ключе. При этом создается новая идея, которая наравне с другими оценивается.\
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Более подробно
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Цикл предложения идей:\
+В начале происходит фаза предложения идей, когда сотрудники могут предлагать свои идеи для заданной темы, затем происходит фаза голосования, когда сотрудники голосуют за предложенные идеи - в результате остаётся несколько самых лучших идей каждую из которых руководитель может принять или отклонить.\
+Если тематика состоит из нескольких этапов - то для каждого этапа происходит предложение и голосование, в результате которого остаются несколько лучших идей проходящие на следующий этап, после чего сотрудники могут развивать/дополнять эти идеи дальше на следующих этапах. Таким образом, происходят итерации улучшения идей.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+В системе имеется:\
+- авторизованный вход
+- профиль пользователя, на которой отображается: основная информация о сотруднике (ФИО, email, дата рождение, должность), мои предложенные идеи, мои созданные тематики (если руководитель)
+- страница всех тематик, на которых сотрудник может найти интересующую тематику
+- страница тематики, на которой сотрудник может узнать о тематике и о её этапах а также предложить свою идею
+- страница идеи, на которой можно ознакомится с предложенной идей, проголосовать за неё (если в фазе голосования) или дополнить её (если в фазе предложения), оставить комментарий
+- страница leaderboard, на которой отображается список самых активных пользователей (по кол-ву принятых, предложенных идей)
+- форма создание идеи, на которой пользователь может задать название идеи, описание идеи, приложить фотографии и ссылки на ресурсы
+- форма создания тематики (для руководителей), на которой руководитель может задать название и общее описание тематики, максимальное количество оставляемых идей, продолжительность фазы предложения и оценивания идей. Также при необходимости задать этапы (для каждого этапа: название, описание, продолжительность фаз предложения и оценивания, кол-во оставляемых идей).
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Тex. описание:
+Тип | Web-приложение
+Поддерживаемые браузеры | Chrome, Firefox
+Минимальные системные требования |
+Минимальная версия Chrome - не ниже 90.0, Firefox - не ниже 91.0,
+Размеры экрана | ширина не менее 1280px, высота не менее 720px
+Приложение ориентируется преимущественно на desktop.
