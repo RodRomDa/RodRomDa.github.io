@@ -93,7 +93,7 @@ export default function ThemeForm(props) {
                 
             } else draft[name] = '';
         });
-        console.log(updatedErrors);
+
         setErrors(updatedErrors);
      }
 

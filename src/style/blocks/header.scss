@@ -21,7 +21,7 @@ header .menu {
     text-transform: uppercase;
     position: relative;
 
-    a {
+    li {
         line-height: 21px;
         display: block;
         padding: 38px 50px 39px;
@@ -30,7 +30,7 @@ header .menu {
     }
 
     //Right slash |
-    &:not(:last-child) a::after {
+    &:not(:last-child) li::after {
         content: "";
         width: 3px;
         height: 44px;

@@ -6,9 +6,9 @@ export default function Comments(props) {
     const comments = getIdea(props.ideaId).comments;
 
     return <ul className="comments">
-                {comments.map((comment) => {
+                {comments.map((comment, i) => {
                  const author = getUser(comment.authorId);
-                 return <li className="comment">
+                 return <li key={i} className="comment">
                             <div className="comment-head">
                                 <div className="author">
                                     <Image src = {`/img/${author.avatar}`} />

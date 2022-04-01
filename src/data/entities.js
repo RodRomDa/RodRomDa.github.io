@@ -381,7 +381,7 @@ export function getTheme(themeId) {
 
 export function getThemeIdeasPage(themeId, page) {
     const pageSize = 5;
-    return ideas.filter((idea) => idea.themeId == themeId).sort((a, b) => (a.likes >= b.likes)&&(a.title >= b.title)).slice(pageSize*page, pageSize*(page+1));
+    return ideas.filter((idea) => idea.themeId == themeId).sort((a, b) => (a.likes < b.likes)||(a.likes == b.likes)&&(a.title >= b.title)).slice(pageSize*page, pageSize*(page+1));
 }
 
 export function getIdea(ideaId) {

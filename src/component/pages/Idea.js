@@ -54,9 +54,9 @@ export default function Idea(props) {
                             <section className="idea resources">
                                 <h1>Прилагаемые ресурсы</h1>
                                 <ul className="resource-links">
-                                    <li className="link"><a href="#">Влияние освещения на работоспособность сотрудников</a></li>
-                                    <li className="link"><a href="#">Освещение в офисе: считаем и делаем выводы</a></li>
-                                    <li className="link"><a href="#">Расчётный план затрат на электроэнергию</a></li>
+                                    <li className="link"><a href="https://docs.google.com/document/d/1RAfcz9GrEr9Yfsbh3VH3mQvmmx8PTu8UWTQFs6B_SBY/edait?usp=sharing">Влияние освещения на работоспособность сотрудников</a></li>
+                                    <li className="link"><a href="https://www.figma.com/file/PHVPZ4Qczf6jwT8xcKAQSf/Project_DavidenkoRR?node-id=55%3A3306">Освещение в офисе: считаем и делаем выводы</a></li>
+                                    <li className="link"><a href="https://github.com/RodRomDa/RodRomDa.github.io/tree/dev">Расчётный план затрат на электроэнергию</a></li>
                                 </ul>
                             </section>
                             <section className="idea add-comment">
